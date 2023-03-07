@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>js</title>
+</head>
+<body>
+<button type="button" onclick="showMessage();">Click Me!</button>
+<hr>
+<br>
+<button type="button" onclick="Clear();">Clear</button>
+<hr>
+<br>
+<button type="button" onclick="timeTest();">Time Test</button>
+<hr>
+<br>
+<button type="button" onclick="table();">Time Table</button>
+<hr>
+<br>
+<button type="button" onclick="count();">Count</button>
+<hr>
+<br>
+<button type="button" onclick="groupTest();">Group</button>
+<script>
+  function showMessage(){
+    console.log('こんにちは');
+    console.error('Error');
+    console.warn('warn');
+  }
+  function Clear(){
+    console.clear();
+  }
+  function timeTest(){
+    console.time();
+    for (let i=0;i<10;i++){
+      console.log(i)
+    }
+    console.timeEnd()
+  }
+  function table(){
+    console.table([1,2,3,4,5]);
+    console.table({rank1:"1st",rank2:"2nd",rank3:"3nd",rank4:"4",})
+  }
+  function count(){
+    for (let i = 0;i<10;i++){
+      console.count("No");
+    }
+  }
+  function groupTest(){
+    console.log("こんにちは");
+    console.group();
+    console.log("login group");
+    console.log("login group");
+    console.log("login group");
+    console.log("login group");
+    console.groupEnd();
+    console.log("logout group")
+  }
+
+</script>
+</body>
+</html>
